@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DataLayer.Library.Genre>
+@{
+    ViewBag.Title = "Index";
+}
+<body>
+    <div class="cont">
+        <div class="col-sm-3" id="genres">
+            @foreach (var item in Model)
+            {
+                <div class="Genre">
+                    <a class="lines" id="@item.GenreId">  @Html.DisplayFor(modelItem => item.Name)</a>
+                </div>
+            }
+        </div>
+        <div class="col-sm-6">
+            <div class="HeadBooks" id="headGenr">
+                <h2></h2>
+            </div>
+            <div class="HeadBooks" id="headAuthor">
+                <h2></h2>
+            </div>
+            <div id="Books">
+                @Html.PartialAsync("BookSearch");
+
+            </div>
+        </div>
+        <div class="col-sm-3" id="authors">
+            @foreach (var author in ViewBag.Authors)
+            {
+                <div class="Author">
+                    <a class="lines" id="@author.AuthorId"> @author.FirstName @author.LastName</a>
+                </div>
+            }
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>

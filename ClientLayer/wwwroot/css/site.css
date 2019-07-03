@@ -1,0 +1,60 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+nav {
+    margin-top: -70px;
+    padding: 20px 0 20px 50px;
+    background: dimgrey;
+    color: white;
+}
+
+.cont {
+    height: 800px;
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.lines {
+    color: #5a3d33;
+    font-size: 16pt;
+}
+
+.lines:hover {
+    text-decoration: none;
+}
+
+.lines:focus {
+    text-decoration: none;
+}
+
+.HeadBooks {
+    border: 1px solid black;
+}
+
+.Books {
+    min-height: 50px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

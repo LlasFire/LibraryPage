@@ -99,11 +99,7 @@ function showAuthor() {
 }
 
 function GetBooks(id, filter) {
-    $.ajax({
-        url: '/Genres/BookSearch?filter=' + filter + '&id=' + id,
-        type: 'POST',
-        success: function (books) {
-            $('#Books').html(books);
-            }
-    });
+    return fetch(`/Genres/BookSearch?filter=${filter}&id=${id}`, { method: 'POST' })
+        .then(res => res.text())
+        .then(books => document.getElementById('Books').innerHTML = books);
 }
